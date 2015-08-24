@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oE0-Rx-PhX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Chart View-->
+        <scene sceneID="wn2-PH-ZzY">
+            <objects>
+                <tableViewController id="jOD-KL-1cH" customClass="MCTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HIS-ur-Stc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="jOD-KL-1cH" id="REv-RT-9SL"/>
+                            <outlet property="delegate" destination="jOD-KL-1cH" id="vuJ-2d-uDZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chart View" id="DQc-vg-S98"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKp-b2-aP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="381"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s3K-dv-Vei">
+            <objects>
+                <navigationController id="oE0-Rx-PhX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HbJ-CT-V6f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jOD-KL-1cH" kind="relationship" relationship="rootViewController" id="7Gf-xi-cbv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8n-4t-FR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-653" y="381"/>
+        </scene>
+    </scenes>
+</document>

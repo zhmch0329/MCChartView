@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33C813331B8AC0D800D103CE /* MCBarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813131B8AC0D800D103CE /* MCBarChartViewController.m */; };
+		33C813341B8AC0D800D103CE /* MCCircleChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813151B8AC0D800D103CE /* MCCircleChartViewController.m */; };
+		33C813351B8AC0D800D103CE /* MCCoverageChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813171B8AC0D800D103CE /* MCCoverageChartViewController.m */; };
+		33C813361B8AC0D800D103CE /* MCLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813191B8AC0D800D103CE /* MCLineChartViewController.m */; };
+		33C813371B8AC0D800D103CE /* MCPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C8131B1B8AC0D800D103CE /* MCPieChartViewController.m */; };
+		33C813381B8AC0D800D103CE /* MCRadarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C8131D1B8AC0D800D103CE /* MCRadarChartViewController.m */; };
+		33C813391B8AC0D800D103CE /* MCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C8131F1B8AC0D800D103CE /* MCTableViewController.m */; };
+		33C8133A1B8AC0D800D103CE /* MCBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813221B8AC0D800D103CE /* MCBarChartView.m */; };
+		33C8133B1B8AC0D800D103CE /* MCChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813241B8AC0D800D103CE /* MCChartInformationView.m */; };
+		33C8133C1B8AC0D800D103CE /* MCCircleChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813261B8AC0D800D103CE /* MCCircleChartView.m */; };
+		33C8133D1B8AC0D800D103CE /* MCCoverageChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813281B8AC0D800D103CE /* MCCoverageChartView.m */; };
+		33C8133E1B8AC0D800D103CE /* MCCoverageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C8132A1B8AC0D800D103CE /* MCCoverageLayer.m */; };
+		33C8133F1B8AC0D800D103CE /* MCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C8132C1B8AC0D800D103CE /* MCLineChartView.m */; };
+		33C813401B8AC0D800D103CE /* MCPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C8132E1B8AC0D800D103CE /* MCPieChartView.m */; };
+		33C813411B8AC0D800D103CE /* MCRadarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813301B8AC0D800D103CE /* MCRadarChartView.m */; };
+		33C813421B8AC0D800D103CE /* MCRadarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C813321B8AC0D800D103CE /* MCRadarLayer.m */; };
+		33D278621B81DD62001E7A8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D278611B81DD62001E7A8C /* main.m */; };
+		33D278651B81DD62001E7A8C /* MCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D278641B81DD62001E7A8C /* MCAppDelegate.m */; };
+		33D2786B1B81DD62001E7A8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D278691B81DD62001E7A8C /* Main.storyboard */; };
+		33D2786D1B81DD62001E7A8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D2786C1B81DD62001E7A8C /* Images.xcassets */; };
+		33D278701B81DD62001E7A8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D2786E1B81DD62001E7A8C /* LaunchScreen.xib */; };
+		33D2787C1B81DD62001E7A8C /* MCChartViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D2787B1B81DD62001E7A8C /* MCChartViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33D278761B81DD62001E7A8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33D278541B81DD62001E7A8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33D2785B1B81DD62001E7A8C;
+			remoteInfo = MCChartView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33C813121B8AC0D800D103CE /* MCBarChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBarChartViewController.h; sourceTree = "<group>"; };
+		33C813131B8AC0D800D103CE /* MCBarChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBarChartViewController.m; sourceTree = "<group>"; };
+		33C813141B8AC0D800D103CE /* MCCircleChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCircleChartViewController.h; sourceTree = "<group>"; };
+		33C813151B8AC0D800D103CE /* MCCircleChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCircleChartViewController.m; sourceTree = "<group>"; };
+		33C813161B8AC0D800D103CE /* MCCoverageChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCoverageChartViewController.h; sourceTree = "<group>"; };
+		33C813171B8AC0D800D103CE /* MCCoverageChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCoverageChartViewController.m; sourceTree = "<group>"; };
+		33C813181B8AC0D800D103CE /* MCLineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineChartViewController.h; sourceTree = "<group>"; };
+		33C813191B8AC0D800D103CE /* MCLineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineChartViewController.m; sourceTree = "<group>"; };
+		33C8131A1B8AC0D800D103CE /* MCPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPieChartViewController.h; sourceTree = "<group>"; };
+		33C8131B1B8AC0D800D103CE /* MCPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPieChartViewController.m; sourceTree = "<group>"; };
+		33C8131C1B8AC0D800D103CE /* MCRadarChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRadarChartViewController.h; sourceTree = "<group>"; };
+		33C8131D1B8AC0D800D103CE /* MCRadarChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRadarChartViewController.m; sourceTree = "<group>"; };
+		33C8131E1B8AC0D800D103CE /* MCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTableViewController.h; sourceTree = "<group>"; };
+		33C8131F1B8AC0D800D103CE /* MCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTableViewController.m; sourceTree = "<group>"; };
+		33C813211B8AC0D800D103CE /* MCBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBarChartView.h; sourceTree = "<group>"; };
+		33C813221B8AC0D800D103CE /* MCBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBarChartView.m; sourceTree = "<group>"; };
+		33C813231B8AC0D800D103CE /* MCChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCChartInformationView.h; sourceTree = "<group>"; };
+		33C813241B8AC0D800D103CE /* MCChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCChartInformationView.m; sourceTree = "<group>"; };
+		33C813251B8AC0D800D103CE /* MCCircleChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCircleChartView.h; sourceTree = "<group>"; };
+		33C813261B8AC0D800D103CE /* MCCircleChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCircleChartView.m; sourceTree = "<group>"; };
+		33C813271B8AC0D800D103CE /* MCCoverageChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCoverageChartView.h; sourceTree = "<group>"; };
+		33C813281B8AC0D800D103CE /* MCCoverageChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCoverageChartView.m; sourceTree = "<group>"; };
+		33C813291B8AC0D800D103CE /* MCCoverageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCoverageLayer.h; sourceTree = "<group>"; };
+		33C8132A1B8AC0D800D103CE /* MCCoverageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCoverageLayer.m; sourceTree = "<group>"; };
+		33C8132B1B8AC0D800D103CE /* MCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineChartView.h; sourceTree = "<group>"; };
+		33C8132C1B8AC0D800D103CE /* MCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineChartView.m; sourceTree = "<group>"; };
+		33C8132D1B8AC0D800D103CE /* MCPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPieChartView.h; sourceTree = "<group>"; };
+		33C8132E1B8AC0D800D103CE /* MCPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPieChartView.m; sourceTree = "<group>"; };
+		33C8132F1B8AC0D800D103CE /* MCRadarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRadarChartView.h; sourceTree = "<group>"; };
+		33C813301B8AC0D800D103CE /* MCRadarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRadarChartView.m; sourceTree = "<group>"; };
+		33C813311B8AC0D800D103CE /* MCRadarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRadarLayer.h; sourceTree = "<group>"; };
+		33C813321B8AC0D800D103CE /* MCRadarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRadarLayer.m; sourceTree = "<group>"; };
+		33D2785C1B81DD62001E7A8C /* MCChartView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCChartView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33D278601B81DD62001E7A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D278611B81DD62001E7A8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33D278631B81DD62001E7A8C /* MCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAppDelegate.h; sourceTree = "<group>"; };
+		33D278641B81DD62001E7A8C /* MCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAppDelegate.m; sourceTree = "<group>"; };
+		33D2786A1B81DD62001E7A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33D2786C1B81DD62001E7A8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		33D2786F1B81DD62001E7A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		33D278751B81DD62001E7A8C /* MCChartViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCChartViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33D2787A1B81DD62001E7A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D2787B1B81DD62001E7A8C /* MCChartViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCChartViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33D278591B81DD62001E7A8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D278721B81DD62001E7A8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33C813111B8AC0D800D103CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33C813121B8AC0D800D103CE /* MCBarChartViewController.h */,
+				33C813131B8AC0D800D103CE /* MCBarChartViewController.m */,
+				33C813141B8AC0D800D103CE /* MCCircleChartViewController.h */,
+				33C813151B8AC0D800D103CE /* MCCircleChartViewController.m */,
+				33C813161B8AC0D800D103CE /* MCCoverageChartViewController.h */,
+				33C813171B8AC0D800D103CE /* MCCoverageChartViewController.m */,
+				33C813181B8AC0D800D103CE /* MCLineChartViewController.h */,
+				33C813191B8AC0D800D103CE /* MCLineChartViewController.m */,
+				33C8131A1B8AC0D800D103CE /* MCPieChartViewController.h */,
+				33C8131B1B8AC0D800D103CE /* MCPieChartViewController.m */,
+				33C8131C1B8AC0D800D103CE /* MCRadarChartViewController.h */,
+				33C8131D1B8AC0D800D103CE /* MCRadarChartViewController.m */,
+				33C8131E1B8AC0D800D103CE /* MCTableViewController.h */,
+				33C8131F1B8AC0D800D103CE /* MCTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33C813201B8AC0D800D103CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33C813211B8AC0D800D103CE /* MCBarChartView.h */,
+				33C813221B8AC0D800D103CE /* MCBarChartView.m */,
+				33C813231B8AC0D800D103CE /* MCChartInformationView.h */,
+				33C813241B8AC0D800D103CE /* MCChartInformationView.m */,
+				33C813251B8AC0D800D103CE /* MCCircleChartView.h */,
+				33C813261B8AC0D800D103CE /* MCCircleChartView.m */,
+				33C813271B8AC0D800D103CE /* MCCoverageChartView.h */,
+				33C813281B8AC0D800D103CE /* MCCoverageChartView.m */,
+				33C813291B8AC0D800D103CE /* MCCoverageLayer.h */,
+				33C8132A1B8AC0D800D103CE /* MCCoverageLayer.m */,
+				33C8132B1B8AC0D800D103CE /* MCLineChartView.h */,
+				33C8132C1B8AC0D800D103CE /* MCLineChartView.m */,
+				33C8132D1B8AC0D800D103CE /* MCPieChartView.h */,
+				33C8132E1B8AC0D800D103CE /* MCPieChartView.m */,
+				33C8132F1B8AC0D800D103CE /* MCRadarChartView.h */,
+				33C813301B8AC0D800D103CE /* MCRadarChartView.m */,
+				33C813311B8AC0D800D103CE /* MCRadarLayer.h */,
+				33C813321B8AC0D800D103CE /* MCRadarLayer.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33D278531B81DD61001E7A8C = {
+			isa = PBXGroup;
+			children = (
+				33D2785E1B81DD62001E7A8C /* MCChartView */,
+				33D278781B81DD62001E7A8C /* MCChartViewTests */,
+				33D2785D1B81DD62001E7A8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33D2785D1B81DD62001E7A8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33D2785C1B81DD62001E7A8C /* MCChartView.app */,
+				33D278751B81DD62001E7A8C /* MCChartViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33D2785E1B81DD62001E7A8C /* MCChartView */ = {
+			isa = PBXGroup;
+			children = (
+				33D278631B81DD62001E7A8C /* MCAppDelegate.h */,
+				33D278641B81DD62001E7A8C /* MCAppDelegate.m */,
+				33C813111B8AC0D800D103CE /* Controller */,
+				33C813201B8AC0D800D103CE /* View */,
+				33D278691B81DD62001E7A8C /* Main.storyboard */,
+				33D2786C1B81DD62001E7A8C /* Images.xcassets */,
+				33D2786E1B81DD62001E7A8C /* LaunchScreen.xib */,
+				33D2785F1B81DD62001E7A8C /* Supporting Files */,
+			);
+			path = MCChartView;
+			sourceTree = "<group>";
+		};
+		33D2785F1B81DD62001E7A8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33D278601B81DD62001E7A8C /* Info.plist */,
+				33D278611B81DD62001E7A8C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33D278781B81DD62001E7A8C /* MCChartViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				33D2787B1B81DD62001E7A8C /* MCChartViewTests.m */,
+				33D278791B81DD62001E7A8C /* Supporting Files */,
+			);
+			path = MCChartViewTests;
+			sourceTree = "<group>";
+		};
+		33D278791B81DD62001E7A8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33D2787A1B81DD62001E7A8C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33D2785B1B81DD62001E7A8C /* MCChartView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33D2787F1B81DD62001E7A8C /* Build configuration list for PBXNativeTarget "MCChartView" */;
+			buildPhases = (
+				33D278581B81DD62001E7A8C /* Sources */,
+				33D278591B81DD62001E7A8C /* Frameworks */,
+				33D2785A1B81DD62001E7A8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MCChartView;
+			productName = MCChartView;
+			productReference = 33D2785C1B81DD62001E7A8C /* MCChartView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33D278741B81DD62001E7A8C /* MCChartViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33D278821B81DD62001E7A8C /* Build configuration list for PBXNativeTarget "MCChartViewTests" */;
+			buildPhases = (
+				33D278711B81DD62001E7A8C /* Sources */,
+				33D278721B81DD62001E7A8C /* Frameworks */,
+				33D278731B81DD62001E7A8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33D278771B81DD62001E7A8C /* PBXTargetDependency */,
+			);
+			name = MCChartViewTests;
+			productName = MCChartViewTests;
+			productReference = 33D278751B81DD62001E7A8C /* MCChartViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33D278541B81DD62001E7A8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = zhmch0329;
+				TargetAttributes = {
+					33D2785B1B81DD62001E7A8C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					33D278741B81DD62001E7A8C = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 33D2785B1B81DD62001E7A8C;
+					};
+				};
+			};
+			buildConfigurationList = 33D278571B81DD62001E7A8C /* Build configuration list for PBXProject "MCChartView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33D278531B81DD61001E7A8C;
+			productRefGroup = 33D2785D1B81DD62001E7A8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33D2785B1B81DD62001E7A8C /* MCChartView */,
+				33D278741B81DD62001E7A8C /* MCChartViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33D2785A1B81DD62001E7A8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33D2786B1B81DD62001E7A8C /* Main.storyboard in Resources */,
+				33D278701B81DD62001E7A8C /* LaunchScreen.xib in Resources */,
+				33D2786D1B81DD62001E7A8C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D278731B81DD62001E7A8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33D278581B81DD62001E7A8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C813421B8AC0D800D103CE /* MCRadarLayer.m in Sources */,
+				33D278651B81DD62001E7A8C /* MCAppDelegate.m in Sources */,
+				33C813351B8AC0D800D103CE /* MCCoverageChartViewController.m in Sources */,
+				33C813381B8AC0D800D103CE /* MCRadarChartViewController.m in Sources */,
+				33C8133F1B8AC0D800D103CE /* MCLineChartView.m in Sources */,
+				33C813391B8AC0D800D103CE /* MCTableViewController.m in Sources */,
+				33C813411B8AC0D800D103CE /* MCRadarChartView.m in Sources */,
+				33C813371B8AC0D800D103CE /* MCPieChartViewController.m in Sources */,
+				33C813401B8AC0D800D103CE /* MCPieChartView.m in Sources */,
+				33C8133B1B8AC0D800D103CE /* MCChartInformationView.m in Sources */,
+				33C8133D1B8AC0D800D103CE /* MCCoverageChartView.m in Sources */,
+				33C8133A1B8AC0D800D103CE /* MCBarChartView.m in Sources */,
+				33D278621B81DD62001E7A8C /* main.m in Sources */,
+				33C8133E1B8AC0D800D103CE /* MCCoverageLayer.m in Sources */,
+				33C813361B8AC0D800D103CE /* MCLineChartViewController.m in Sources */,
+				33C8133C1B8AC0D800D103CE /* MCCircleChartView.m in Sources */,
+				33C813331B8AC0D800D103CE /* MCBarChartViewController.m in Sources */,
+				33C813341B8AC0D800D103CE /* MCCircleChartViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D278711B81DD62001E7A8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33D2787C1B81DD62001E7A8C /* MCChartViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33D278771B81DD62001E7A8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33D2785B1B81DD62001E7A8C /* MCChartView */;
+			targetProxy = 33D278761B81DD62001E7A8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33D278691B81DD62001E7A8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33D2786A1B81DD62001E7A8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33D2786E1B81DD62001E7A8C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33D2786F1B81DD62001E7A8C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33D2787D1B81DD62001E7A8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33D2787E1B81DD62001E7A8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33D278801B81DD62001E7A8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MCChartView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		33D278811B81DD62001E7A8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MCChartView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		33D278831B81DD62001E7A8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MCChartViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCChartView.app/MCChartView";
+			};
+			name = Debug;
+		};
+		33D278841B81DD62001E7A8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MCChartViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCChartView.app/MCChartView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33D278571B81DD62001E7A8C /* Build configuration list for PBXProject "MCChartView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33D2787D1B81DD62001E7A8C /* Debug */,
+				33D2787E1B81DD62001E7A8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33D2787F1B81DD62001E7A8C /* Build configuration list for PBXNativeTarget "MCChartView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33D278801B81DD62001E7A8C /* Debug */,
+				33D278811B81DD62001E7A8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33D278821B81DD62001E7A8C /* Build configuration list for PBXNativeTarget "MCChartViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33D278831B81DD62001E7A8C /* Debug */,
+				33D278841B81DD62001E7A8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33D278541B81DD62001E7A8C /* Project object */;
+}
