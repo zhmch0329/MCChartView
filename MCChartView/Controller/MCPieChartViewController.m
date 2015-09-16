@@ -39,7 +39,7 @@
     _pieChartView.ringWidth = 20;
     [self.view addSubview:_pieChartView];
     
-    [_pieChartView reloadDataWithAnimate:NO];
+    [_pieChartView reloadDataWithAnimate:YES];
 }
 
 - (void)didReceiveMemoryWarning {

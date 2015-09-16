@@ -226,8 +226,8 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
 }
 
 - (void)reloadBarWithAnimate:(BOOL)animate {
-    [_scrollView.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     [_scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [_scrollView.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     
     CGFloat xSection = _paddingSection;
     CGFloat xOffset = _paddingSection + _barWidth/2;

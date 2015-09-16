@@ -12,8 +12,6 @@
 
 @interface MCCircleChartView ()
 
-@property (nonatomic, assign) CGFloat circleWidth;
-
 @property (nonatomic, assign) NSInteger numberOfCircle;
 @property (nonatomic, strong) NSMutableDictionary *chartDataSource;
 @property (nonatomic, strong) NSArray *sortKeys;
@@ -55,6 +53,15 @@
     _introduceColor = [UIColor blackColor];
 }
 
+- (void)setCircleWidth:(CGFloat)circleWidth {
+    CGFloat maxCircleWidth = _maxRadius/(_numberOfCircle + 1);
+    if (_circleWidth > maxCircleWidth) {
+        _circleWidth = maxCircleWidth;
+    } else {
+        _circleWidth = circleWidth;
+    }
+}
+
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     if (self.chartDataSource == nil) {
@@ -63,13 +70,12 @@
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGFloat circleWidth = _maxRadius/(_numberOfCircle + 1);
     for (NSInteger index = 0; index < _numberOfCircle; index ++) {
         NSInteger keyIndex = [_sortKeys[index] integerValue];
         
         CGContextSetFillColorWithColor(context, [_circleColors[index] CGColor]);
-        CGFloat radius = _maxRadius - circleWidth * index - circleWidth/2;
-        CGRect colorRect = CGRectMake(_centerPoint.x + CIRCLE_CHART_PADDING, _centerPoint.y - radius - circleWidth/2 + 2 * _circlePadding, circleWidth, circleWidth - 4 * _circlePadding);
+        CGFloat radius = _maxRadius - _circleWidth * index - _circleWidth/2;
+        CGRect colorRect = CGRectMake(_centerPoint.x + CIRCLE_CHART_PADDING, _centerPoint.y - radius - _circleWidth/2 + 2 * _circlePadding, _circleWidth, _circleWidth - 4 * _circlePadding);
         CGContextAddRect(context, colorRect);
         CGContextFillPath(context);
         
@@ -116,7 +122,6 @@
     _circleColors = [[NSMutableArray alloc] initWithCapacity:_numberOfCircle];
     
     CGFloat angleValue = _maxAngle/[_chartDataSource[[_sortKeys firstObject]] floatValue];
-    CGFloat circleWidth = _maxRadius/(_numberOfCircle + 1);
     for (NSInteger index = 0; index < _numberOfCircle; index ++) {
         NSInteger keyIndex = [_sortKeys[index] integerValue];
         UIColor *circleColor = [UIColor colorWithRed:(index + 1.0)/_numberOfCircle green:1 - (index + 1.0)/_numberOfCircle blue:index * 1.0/_numberOfCircle alpha:1.0];
@@ -126,13 +131,13 @@
         [_circleColors addObject:circleColor];
         
         UIBezierPath *bezierPath = [UIBezierPath bezierPath];
-        CGFloat radius = _maxRadius - circleWidth * index - circleWidth/2;
+        CGFloat radius = _maxRadius - _circleWidth * index - _circleWidth/2;
         CGFloat angle = [_chartDataSource[@(keyIndex)] floatValue] * angleValue;
         [bezierPath addArcWithCenter:_centerPoint radius:radius startAngle:3 * M_PI_2 endAngle:3 * M_PI_2 - angle clockwise:NO];
         CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
         shapeLayer.strokeColor = circleColor.CGColor;
         shapeLayer.fillColor = [UIColor clearColor].CGColor;
-        shapeLayer.lineWidth = circleWidth - _circlePadding;
+        shapeLayer.lineWidth = _circleWidth - _circlePadding;
         shapeLayer.path = bezierPath.CGPath;
         [self.layer addSublayer:shapeLayer];
         

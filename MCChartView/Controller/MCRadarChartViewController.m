@@ -41,7 +41,7 @@
     _radarChartView.fillColor = [UIColor colorWithRed:0/255.0 green:207/255.0 blue:187/255.0 alpha:0.2];
     [self.view addSubview:_radarChartView];
     
-    [_radarChartView reloadDataWithAnimate:NO];
+    [_radarChartView reloadDataWithAnimate:YES];
 }
 
 - (void)didReceiveMemoryWarning {

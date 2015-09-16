@@ -31,7 +31,7 @@
     _circleChartView.delegate = self;
     [self.view addSubview:_circleChartView];
     
-    [_circleChartView reloadDataWithAnimate:NO];
+    [_circleChartView reloadDataWithAnimate:YES];
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData)];
     self.navigationItem.rightBarButtonItem = rightItem;

@@ -102,10 +102,13 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
 - (void)drawCoordinateWithContext:(CGContextRef)context {
     CGFloat width = self.bounds.size.width;
     
-    CGContextSetStrokeColorWithColor(context, _colorOfYAxis.CGColor);
-    CGContextMoveToPoint(context, LINE_CHART_LEFT_PADDING - 1, LINE_CHART_TOP_PADDING - 1);
-    CGContextAddLineToPoint(context, LINE_CHART_LEFT_PADDING - 1, LINE_CHART_TOP_PADDING + _chartHeight + 1);
-    CGContextStrokePath(context);
+    if (!_hideYAxis) {
+        CGContextSetStrokeColorWithColor(context, _colorOfYAxis.CGColor);
+        CGContextMoveToPoint(context, LINE_CHART_LEFT_PADDING - 1, LINE_CHART_TOP_PADDING - 1);
+        CGContextAddLineToPoint(context, LINE_CHART_LEFT_PADDING - 1, LINE_CHART_TOP_PADDING + _chartHeight + 1);
+        CGContextStrokePath(context);
+    }
+
     
     CGContextSetStrokeColorWithColor(context, _colorOfXAxis.CGColor);
     CGContextMoveToPoint(context, LINE_CHART_LEFT_PADDING - 1, LINE_CHART_TOP_PADDING + _chartHeight + 1);
@@ -169,7 +172,7 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
 
 - (void)reloadDataWithAnimate:(BOOL)animate {
     [self reloadChartDataSource];
-    [self reloadChartYAxis];
+    _hideYAxis ?: [self reloadChartYAxis];
     [self reloadLineWithAnimate:animate];
 }
 
@@ -212,6 +215,7 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
 }
 
 - (void)reloadChartYAxis {
+
     CGFloat chartYOffset = _oppositeY ? LINE_CHART_TOP_PADDING : _chartHeight + LINE_CHART_TOP_PADDING;
     CGFloat unitHeight = _chartHeight/_numberOfYAxis;
     CGFloat unitValue = ([self.maxValue floatValue] - [_minValue floatValue])/_numberOfYAxis;
@@ -229,52 +233,82 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
 }
 
 - (void)reloadLineWithAnimate:(BOOL)animate {
-    [_scrollView.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     [_scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [_scrollView.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     
     for (NSInteger lineNumber = 0; lineNumber < _lineCount; lineNumber ++) {
         NSArray *array = _chartDataSource[lineNumber];
         CAShapeLayer *lineLayer = [[CAShapeLayer alloc] init];
+        CAShapeLayer *pointLayer = [[CAShapeLayer alloc] init];
         if ([self.delegate respondsToSelector:@selector(lineChartView:lineColorWithLineNumber:)]) {
             CGColorRef color = [self.delegate lineChartView:self lineColorWithLineNumber:lineNumber].CGColor;
-            lineLayer.fillColor = [UIColor clearColor].CGColor;
             lineLayer.strokeColor = color;
+            lineLayer.fillColor = [UIColor clearColor].CGColor;
+            pointLayer.strokeColor = color;
+            pointLayer.fillColor = [UIColor whiteColor].CGColor;
         } else {
             CGColorRef color = [UIColor redColor].CGColor;
-            lineLayer.fillColor = [UIColor clearColor].CGColor;
             lineLayer.strokeColor = color;
+            lineLayer.fillColor = [UIColor clearColor].CGColor;
+            pointLayer.strokeColor = color;
+            pointLayer.fillColor = [UIColor whiteColor].CGColor;
         }
         if ([self.delegate respondsToSelector:@selector(lineChartView:lineWidthWithLineNumber:)]) {
             lineLayer.lineWidth = [self.delegate lineChartView:self lineWidthWithLineNumber:lineNumber];
+            pointLayer.lineWidth = [self.delegate lineChartView:self lineWidthWithLineNumber:lineNumber];
         } else {
             lineLayer.lineWidth = LINE_WIDTH_DEFAULT;
+            pointLayer.lineWidth = LINE_WIDTH_DEFAULT;
         }
+        
+        
         
         CGFloat xOffset = _dotPadding/2;
         CGFloat chartYOffset = _oppositeY ? LINE_CHART_TOP_PADDING : _chartHeight + LINE_CHART_TOP_PADDING;
-        UIBezierPath *bezierPath = [[UIBezierPath alloc] init];
+        UIBezierPath *lineBezierPath = [UIBezierPath bezierPath];
+        UIBezierPath *pointBezierPath = [UIBezierPath bezierPath];
         for (NSInteger index = 0; index < array.count; index ++) {
             CGFloat normalizedHeight = [self normalizedHeightForRawHeight:array[index]];
             CGFloat yOffset = chartYOffset + (_oppositeY ? normalizedHeight : -normalizedHeight);
+            if ([self.delegate respondsToSelector:@selector(lineChartView:pointViewOfDotInLineNumber:index:)]) {
+                UIView *view = [self.delegate lineChartView:self pointViewOfDotInLineNumber:lineNumber index:index];
+                if (view) {
+                    view.center = CGPointMake(xOffset, yOffset);
+                    [_scrollView addSubview:view];
+                } else {
+                    [pointBezierPath moveToPoint:CGPointMake(xOffset + _dotRadius, yOffset)];
+                    [pointBezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:0 endAngle:2 * M_PI clockwise:YES];
+                }
+            } else {
+                [pointBezierPath moveToPoint:CGPointMake(xOffset + _dotRadius, yOffset)];
+                [pointBezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:0 endAngle:2 * M_PI clockwise:YES];
+            }
+
             if (index == 0) {
-                [bezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:-M_PI endAngle:M_PI clockwise:YES];
-                [bezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
+                [lineBezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
+            } else {
+                [lineBezierPath addLineToPoint:CGPointMake(xOffset, yOffset)];
+            }
+            /*
+            if (index == 0) {
+                [lineBezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:-M_PI endAngle:M_PI clockwise:YES];
+                [lineBezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
                 
             } else {
-                CGPoint currentPoint = bezierPath.currentPoint;
+                CGPoint currentPoint = lineBezierPath.currentPoint;
                 CGFloat distance = sqrt((xOffset - currentPoint.x) * (xOffset - currentPoint.x) + (yOffset - currentPoint.y) * (yOffset - currentPoint.y));
                 CGFloat xDistance = (xOffset - currentPoint.x) * _dotRadius/distance;
                 CGFloat yDistance = (yOffset - currentPoint.y) * _dotRadius/distance;
                 CGPoint fromPoint = CGPointMake(currentPoint.x + xDistance, currentPoint.y + yDistance);
                 CGPoint toPoint = CGPointMake(xOffset - xDistance, yOffset - yDistance);
-                [bezierPath moveToPoint:fromPoint];
-                [bezierPath addLineToPoint:toPoint];
+                [lineBezierPath moveToPoint:fromPoint];
+                [lineBezierPath addLineToPoint:toPoint];
                 
-                [bezierPath moveToPoint:CGPointMake(xOffset - _dotRadius, yOffset)];
-                [bezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:-M_PI endAngle:M_PI clockwise:YES];
-                [bezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
+                [lineBezierPath moveToPoint:CGPointMake(xOffset - _dotRadius, yOffset)];
+                [lineBezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:-M_PI endAngle:M_PI clockwise:YES];
+                [lineBezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
             }
-            
+            */
             NSTimeInterval delay = animate ? (array.count + 1) * 0.4 : 0.0;
             if ([self.delegate respondsToSelector:@selector(lineChartView:hintViewOfDotInLineNumber:index:)]) {
                 UIView *hintView = [self.delegate lineChartView:self hintViewOfDotInLineNumber:lineNumber index:index];
@@ -314,8 +348,10 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
             
             xOffset += _dotPadding;
         }
-        lineLayer.path = bezierPath.CGPath;
+        lineLayer.path = lineBezierPath.CGPath;
+        pointLayer.path = pointBezierPath.CGPath;
         [_scrollView.layer insertSublayer:lineLayer atIndex:(unsigned)lineNumber];
+        [_scrollView.layer insertSublayer:pointLayer above:lineLayer];
         
         if (animate) {
             CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];

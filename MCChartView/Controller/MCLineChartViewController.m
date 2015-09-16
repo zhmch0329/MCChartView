@@ -46,7 +46,7 @@
     _lineChartView.colorOfYText = [UIColor whiteColor];
     [self.view addSubview:_lineChartView];
     
-    [_lineChartView reloadDataWithAnimate:NO];
+    [_lineChartView reloadDataWithAnimate:YES];
 }
 
 - (void)didReceiveMemoryWarning {

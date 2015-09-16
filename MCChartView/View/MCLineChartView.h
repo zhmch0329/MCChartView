@@ -31,6 +31,7 @@
 
 - (NSString *)lineChartView:(MCLineChartView *)lineChartView informationOfDotInLineNumber:(NSInteger)lineNumber index:(NSInteger)index;
 - (UIView *)lineChartView:(MCLineChartView *)lineChartView hintViewOfDotInLineNumber:(NSInteger)lineNumber index:(NSInteger)index;
+- (UIView *)lineChartView:(MCLineChartView *)lineChartView pointViewOfDotInLineNumber:(NSInteger)lineNumber index:(NSInteger)index;
 
 @end
 
@@ -50,6 +51,7 @@ CGFloat static const kChartViewUndefinedValue = -1.0f;
 @property (nonatomic, assign) CGFloat yFontSize;
 
 @property (nonatomic, assign) BOOL oppositeY;
+@property (nonatomic, assign) BOOL hideYAxis;
 
 @property (nonatomic, strong) UIColor *colorOfXAxis;
 @property (nonatomic, strong) UIColor *colorOfXText;

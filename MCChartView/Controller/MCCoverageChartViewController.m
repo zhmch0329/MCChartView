@@ -37,7 +37,7 @@
     _coverageChartView.delegate = self;
     [self.view addSubview:_coverageChartView];
     
-    [_coverageChartView reloadDataWithAnimate:NO];
+    [_coverageChartView reloadDataWithAnimate:YES];
     
 }
 

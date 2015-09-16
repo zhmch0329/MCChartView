@@ -37,6 +37,7 @@
 @property (nonatomic, assign) CGPoint centerPoint;
 @property (nonatomic, assign) CGFloat maxAngle;
 @property (nonatomic, assign) CGFloat maxRadius;
+@property (nonatomic, assign) CGFloat circleWidth;
 @property (nonatomic, assign) CGFloat circlePadding;
 
 @property (nonatomic, assign) CGFloat introduceFontSize;
