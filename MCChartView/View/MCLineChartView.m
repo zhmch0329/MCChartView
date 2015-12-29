@@ -215,7 +215,13 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
 }
 
 - (void)reloadChartYAxis {
-
+    
+    for (UIView *view in self.subviews) {
+        if ([view isKindOfClass:[UILabel class]]) {
+            [view removeFromSuperview];
+        }
+    }
+    
     CGFloat chartYOffset = _oppositeY ? LINE_CHART_TOP_PADDING : _chartHeight + LINE_CHART_TOP_PADDING;
     CGFloat unitHeight = _chartHeight/_numberOfYAxis;
     CGFloat unitValue = ([self.maxValue floatValue] - [_minValue floatValue])/_numberOfYAxis;
