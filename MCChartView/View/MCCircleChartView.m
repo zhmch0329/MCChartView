@@ -46,6 +46,7 @@
     _centerPoint = CGPointMake(CGRectGetWidth(self.bounds)/2, CGRectGetHeight(self.bounds)/2);
     _maxRadius = MIN(CGRectGetWidth(self.bounds)/2 - CIRCLE_CHART_PADDING, CGRectGetHeight(self.bounds)/2 - CIRCLE_CHART_PADDING);
     
+    _circleWidth = 16.0;
     _circlePadding = 1.0;
     
     _maxAngle = M_PI/2 * 3;

@@ -14,7 +14,6 @@
 {
     self = [super init];
     if (self) {
-        _drawPoints = YES;
         _radarFillColor = [UIColor clearColor].CGColor;
         _pointRadius = 3.0;
         _progress = 1.0;
@@ -25,7 +24,6 @@
 - (instancetype)initWithLayer:(MCRadarLayer *)layer {
     self = [super initWithLayer:layer];
     if (self) {
-        _drawPoints = layer.drawPoints;
         _radarFillColor = layer.radarFillColor;
         _pointRadius = layer.pointRadius;
         _lineWidth = layer.lineWidth;
@@ -62,7 +60,7 @@
     CGContextClosePath(ctx);
     CGContextDrawPath(ctx, kCGPathFillStroke);
     
-    if (_drawPoints) {
+    if (_pointRadius > 0) {
         CGContextSetLineWidth(ctx, _lineWidth);
         CGContextSetFillColorWithColor(ctx, _radarFillColor);
         CGContextSetStrokeColorWithColor(ctx, _strokeColor);

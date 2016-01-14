@@ -35,10 +35,14 @@
 @property (nonatomic, weak) id<MCCoverageChartViewDataSource> dataSource;
 @property (nonatomic, weak) id<MCCoverageChartViewDelegate> delegate;
 
+/// 中心点位置
 @property (nonatomic, assign) CGPoint centerPoint;
+/// 最大半径
 @property (nonatomic, assign) CGFloat maxRadius;
+/// 最小半径，默认为：0
 @property (nonatomic, assign) CGFloat minRadius;
 
+/// 设置数据最大值
 @property (nonatomic, strong) id maxValue;
 
 @property (nonatomic, assign) BOOL showCoverageInfo;

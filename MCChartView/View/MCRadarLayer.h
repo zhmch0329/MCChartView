@@ -14,7 +14,6 @@
 @property (nonatomic, assign) CGPoint centerPoint;
 @property (nonatomic, strong) NSArray *radius;
 
-@property (nonatomic, assign) BOOL drawPoints;
 @property (nonatomic, assign) CGColorRef radarFillColor;
 @property (nonatomic, assign) CGFloat pointRadius;
 

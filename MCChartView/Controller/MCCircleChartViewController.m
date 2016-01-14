@@ -27,6 +27,7 @@
     _circleChartView = [[MCCircleChartView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 400)];
     _circleChartView.introduceColor = [UIColor whiteColor];
     _circleChartView.maxRadius = 140;
+    _circleChartView.circleWidth = 24.0;
     _circleChartView.dataSource = self;
     _circleChartView.delegate = self;
     [self.view addSubview:_circleChartView];

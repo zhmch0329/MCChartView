@@ -289,13 +289,7 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
                 [pointBezierPath moveToPoint:CGPointMake(xOffset + _dotRadius, yOffset)];
                 [pointBezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:0 endAngle:2 * M_PI clockwise:YES];
             }
-
-            if (index == 0) {
-                [lineBezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
-            } else {
-                [lineBezierPath addLineToPoint:CGPointMake(xOffset, yOffset)];
-            }
-            /*
+            
             if (index == 0) {
                 [lineBezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:-M_PI endAngle:M_PI clockwise:YES];
                 [lineBezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
@@ -314,7 +308,7 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
                 [lineBezierPath addArcWithCenter:CGPointMake(xOffset, yOffset) radius:_dotRadius startAngle:-M_PI endAngle:M_PI clockwise:YES];
                 [lineBezierPath moveToPoint:CGPointMake(xOffset, yOffset)];
             }
-            */
+            
             NSTimeInterval delay = animate ? (array.count + 1) * 0.4 : 0.0;
             if ([self.delegate respondsToSelector:@selector(lineChartView:hintViewOfDotInLineNumber:index:)]) {
                 UIView *hintView = [self.delegate lineChartView:self hintViewOfDotInLineNumber:lineNumber index:index];
@@ -356,6 +350,7 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
         }
         lineLayer.path = lineBezierPath.CGPath;
         pointLayer.path = pointBezierPath.CGPath;
+        pointLayer.fillColor = _solidDot ? lineLayer.strokeColor : [UIColor clearColor].CGColor;
         [_scrollView.layer insertSublayer:lineLayer atIndex:(unsigned)lineNumber];
         [_scrollView.layer insertSublayer:pointLayer above:lineLayer];
         
@@ -368,10 +363,6 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
             animation.fillMode = kCAFillModeForwards;
             animation.delegate = self;
             [lineLayer addAnimation:animation forKey:@"animation"];
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(array.count * 0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                lineLayer.fillColor = _solidDot ? lineLayer.strokeColor : [UIColor clearColor].CGColor;
-            });
         }
     }
 }

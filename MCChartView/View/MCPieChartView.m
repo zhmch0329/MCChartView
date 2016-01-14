@@ -42,7 +42,6 @@
     
     _pieBackgroundColor = [UIColor colorWithRed:63/255.0 green:63/255.0 blue:118/255.0 alpha:1.0];
     
-    _ring = YES;
     _ringWidth = _radius;
     _circle = YES;
 }
@@ -67,7 +66,7 @@
             NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
             [paragraphStyle setLineBreakMode:NSLineBreakByClipping];
             [paragraphStyle setAlignment:NSTextAlignmentCenter];
-            NSAttributedString *title = [[NSAttributedString alloc] initWithString:_ringTitle attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16.0], NSForegroundColorAttributeName: [UIColor blackColor], NSParagraphStyleAttributeName: paragraphStyle}];
+            NSAttributedString *title = [[NSAttributedString alloc] initWithString:_ringTitle attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.0], NSForegroundColorAttributeName: [UIColor blackColor], NSParagraphStyleAttributeName: paragraphStyle}];
             CGSize titleSize = [title size];
             CGRect titleRect = CGRectMake(_centerPoint.x - titleSize.width/2, _centerPoint.y - titleSize.height/2, titleSize.width, titleSize.height);
             [title drawInRect:titleRect];

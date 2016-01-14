@@ -47,7 +47,6 @@
     _radius = MIN(CGRectGetWidth(self.bounds)/2 - RADAR_VIEW_PADDING * 2, CGRectGetHeight(self.bounds)/2 - RADAR_VIEW_PADDING * 4);
     _numberOfLayer = 4;
     
-    _drawPoints = YES;
     _pointRadius = 3.0;
     
     _lineWidth = 1.0;
@@ -188,6 +187,7 @@
     
     MCRadarLayer *radarLayer = [[MCRadarLayer alloc] init];
     radarLayer.frame = self.bounds;
+    radarLayer.pointRadius = _pointRadius;
     radarLayer.fillColor = _fillColor.CGColor;
     radarLayer.strokeColor = _strokeColor.CGColor;
     radarLayer.lineWidth = _lineWidth;

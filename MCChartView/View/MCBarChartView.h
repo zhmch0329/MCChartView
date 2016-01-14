@@ -45,13 +45,19 @@
 @property (nonatomic, weak) id<MCBarChartViewDataSource> dataSource;
 @property (nonatomic, weak) id<MCBarChartViewDelegate> delegate;
 
+/// 最大值，如果未设置计算数据源中的最大值
 @property (nonatomic, strong) id maxValue;
+/// y轴数据标记个数
 @property (nonatomic, assign) NSInteger numberOfYAxis;
+/// y轴数据单位
 @property (nonatomic, copy) NSString *unitOfYAxis;
+/// y轴的颜色
 @property (nonatomic, strong) UIColor *colorOfYAxis;
+/// y轴文本数据颜色
 @property (nonatomic, strong) UIColor *colorOfYText;
-
+/// x轴的颜色
 @property (nonatomic, strong) UIColor *colorOfXAxis;
+/// x轴文本数据颜色
 @property (nonatomic, strong) UIColor *colorOfXText;
 
 - (void)reloadData;
