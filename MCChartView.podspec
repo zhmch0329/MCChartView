@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MCChartView"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "MCChartView are some chartView used in my project!"
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/zhmch0329/MCChartView.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/zhmch0329/MCChartView.git", :tag => "0.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
