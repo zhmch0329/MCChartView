@@ -185,14 +185,14 @@ CGFloat static const kChartViewUndefinedCachedHeight = -1.0f;
         _lineCount = [self.dataSource numberOfLinesInLineChartView:self];
     }
     
-    NSAssert([self.dataSource respondsToSelector:@selector(lineChartView:lineCountAtLineNumber:)], @"BarChartView // delegate must implement lineChartView:lineCountAtLineNumber:");
+    NSAssert([self.dataSource respondsToSelector:@selector(lineChartView:lineCountAtLineNumber:)], @"MCLineChartView // delegate must implement lineChartView:lineCountAtLineNumber:");
     
     _dotPadding = DOT_PADDING_DEFAULT;
     if ([self.delegate respondsToSelector:@selector(dotPaddingInLineChartView:)]) {
         _dotPadding = [self.delegate dotPaddingInLineChartView:self];
     }
     
-    NSAssert(([self.dataSource respondsToSelector:@selector(lineChartView:valueAtLineNumber:index:)]), @"MCBarChartView // delegate must implement - (CGFloat)barChartView:(MCBarChartView *)barChartView valueOfBarsInSection:(NSUInteger)section index:(NSUInteger)index");
+    NSAssert(([self.dataSource respondsToSelector:@selector(lineChartView:valueAtLineNumber:index:)]), @"MCLineChartView // delegate must implement - (CGFloat)lineChartView:(MCLineChartView *)lineChartView valueAtLineNumber:(NSUInteger)lineNumber index:(NSUInteger)index");
     
     NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:_lineCount];
     CGFloat maxContentWith = 0.0;

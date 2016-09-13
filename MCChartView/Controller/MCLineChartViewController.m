@@ -32,12 +32,11 @@
     _dataSource = @[@100, @245, @180, @165, @225];
     
     _lineChartView = [[MCLineChartView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 300)];
-    _lineChartView.dotRadius = 10;
-    _lineChartView.oppositeY = YES;
+    _lineChartView.dotRadius = 5;
     _lineChartView.dataSource = self;
     _lineChartView.delegate = self;
     _lineChartView.minValue = @1;
-    _lineChartView.maxValue = @700;
+    _lineChartView.maxValue = @300;
     _lineChartView.solidDot = YES;
     _lineChartView.numberOfYAxis = 7;
     _lineChartView.colorOfXAxis = [UIColor whiteColor];
@@ -64,7 +63,7 @@
 }
 
 - (NSUInteger)numberOfLinesInLineChartView:(MCLineChartView *)lineChartView {
-    return 1;
+    return 2;
 }
 
 - (NSUInteger)lineChartView:(MCLineChartView *)lineChartView lineCountAtLineNumber:(NSInteger)number {
@@ -72,7 +71,7 @@
 }
 
 - (id)lineChartView:(MCLineChartView *)lineChartView valueAtLineNumber:(NSInteger)lineNumber index:(NSInteger)index {
-    return _dataSource[index];
+    return _dataSource[lineNumber == 0 ? index : [_dataSource count] - index - 1];
 }
 
 - (NSString *)lineChartView:(MCLineChartView *)lineChartView titleAtLineNumber:(NSInteger)number {
